@@ -1,0 +1,80 @@
+<!--https://www.seleniumeasy.com/ant-tutorials/how-to-run-testng-tests-using-build-xml-file-->
+
+	
+	<project name="TestNG" default="runtest" basedir=".">
+
+			<!-- set global properties for build -->
+			<property name="basedir" value="." />
+			<property name="rootdir" value="../.." />
+			<property name="libdir" value="${rootdir}/lib" />
+			<property name="propertydir" value="${rootdir}/properties" />
+			<property name="testng-report-dir" value="${basedir}/test-output" />
+		        <property name="testng-log-dir" value="${basedir}/test-log" />
+		        <property name="testng-config-dir" value="${basedir}/test-config" />
+		        <property name="class-dir" value="${basedir}/classes" />
+
+                       <!--
+
+                        <path id="classpath">
+                                <pathelement location="${class-dir}"/>
+				<fileset dir="${libdir}">
+					<include name="*.jar" />
+				</fileset>
+  	                </path>
+
+                        -->
+
+                        <path id="classpath">
+                                <pathelement location="${class-dir}"/>
+				<fileset dir="${libdir}">
+					<include name="*.jar" />
+				</fileset>
+  	                </path>
+
+                        <property name="verbose" value="true" />
+   
+		     <target name="init">	
+		 	<mkdir dir="${class-dir}" />
+		 	<mkdir dir="${testng-report-dir}" />
+		 	<mkdir dir="${testng-log-dir}" />
+		     </target>
+ 
+                      <target name="clean" depends="init">
+                              <delete includeEmptyDirs="true" verbose="${verbose}">
+                              <fileset dir="${class-dir}" includes="**/*"/>
+      	                      <fileset dir="${testng-log-dir}" includes="**/*"/>
+                              <fileset dir="${testng-report-dir}" includes="**/*"/>
+                          </delete>
+                      </target>
+
+                   <target name="compileutil" depends="clean">
+ 	            <javac  srcdir="${rootdir}/helpers" classpathref="classpath" includeAntRuntime="No" destdir="${class-dir}" verbose="${verbose}" >
+                                 <include name="**/util/**"/> 
+                    </javac>
+                  </target>
+
+                   <target name="compilewebdriver" depends="compileutil">
+ 	            <javac  srcdir="${rootdir}/testsuites" classpathref="classpath" includeAntRuntime="No" destdir="${class-dir}" verbose="${verbose}" >
+                                 <include name="**/webdriver/**"/> 
+                    </javac>
+                  </target>
+
+                   <target name="compiletest" depends="compileutil">
+ 	            <javac  srcdir="${rootdir}/testsuites" classpathref="classpath" includeAntRuntime="No" destdir="${class-dir}" verbose="${verbose}" >
+                               <include name="**/testng/**"/> 
+                     </javac>
+                  </target>
+
+
+                   <taskdef name="testng" classname="org.testng.TestNGAntTask" classpathref="classpath"/>
+
+                   <target name="runtest" depends="compiletest">
+                        <pathconvert property="classpathName" refid="classpath"/>
+                        <echo>Classpath is ${classpathName}</echo>
+                         <testng outputdir="${testng-report-dir}" classpathref="classpath"> 
+                              <xmlfileset dir="${testng-config-dir}" includes="testng.xml"/> 
+                              <jvmarg value="-Djava.util.logging.config.file=${propertydir}/logging.properties"/>
+      </testng>
+   </target>
+
+</project>

@@ -1,0 +1,11 @@
+<!--https://www.seleniumeasy.com/ant-tutorials/how-to-run-testng-tests-using-build-xml-file-->
+
+	
+	<project name="buildall" default="testall" basedir=".">
+          <property name="suitedir" value="testsuites"/>
+            <target name="testall">
+                <subant target="runtest">
+                  <fileset dir="." includes="${suitedir}/**/build.xml"/>
+                </subant>
+            </target>
+        </project>

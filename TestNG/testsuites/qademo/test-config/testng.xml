@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="HomeAwayInterviewSuite">
+   <listeners>
+     <listener class-name="util.testng.CustomerLog"/>
+     <listener class-name="util.testng.CustomerReport"/>
+   </listeners>
+   
+    <parameter name="username" value="testuser22c" />
+    <parameter name="password" value="passw0rd1"/>
+    
+	<test name="HomeAwayInterViewTests">
+	  <classes>
+			<class name="qademo.testng.HomeAwayInterviewTest"/>
+	  </classes>
+	</test>
+	
+</suite>
