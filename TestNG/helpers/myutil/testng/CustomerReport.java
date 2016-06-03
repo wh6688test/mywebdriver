@@ -1,4 +1,4 @@
-package util.testng;
+package myutil.testng;
 
 import java.util.List;
 

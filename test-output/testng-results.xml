@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="71148" started-at="2016-06-03T04:31:53Z" finished-at="2016-06-03T04:33:04Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="71148" started-at="2016-06-03T04:31:53Z" finished-at="2016-06-03T04:33:04Z">
+      <class name="qademo.testng.HomeAwayInterviewTest">
+        <test-method status="PASS" signature="testBeforeSuite()[pri:0, instance:qademo.testng.HomeAwayInterviewTest@69997e9d]" name="testBeforeSuite" is-config="true" duration-ms="2523" started-at="2016-06-02T23:31:50Z" finished-at="2016-06-02T23:31:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBeforeSuite -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:qademo.testng.HomeAwayInterviewTest@69997e9d]" name="setup" is-config="true" duration-ms="1" started-at="2016-06-02T23:31:53Z" finished-at="2016-06-02T23:31:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testOrderSubmit(java.lang.String, java.lang.String)[pri:1, instance:qademo.testng.HomeAwayInterviewTest@69997e9d]" name="testOrderSubmit" duration-ms="27676" started-at="2016-06-02T23:31:53Z" description="Testing sumit an order that contains submitting iPhonr4s 16GB SIM-Free Black, Verifying total price" finished-at="2016-06-02T23:32:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testuser22c]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[passw0rd1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOrderSubmit -->
+        <test-method status="PASS" signature="testUpdateOrderQuantity(java.lang.String, java.lang.String)[pri:0, instance:qademo.testng.HomeAwayInterviewTest@69997e9d]" name="testUpdateOrderQuantity" duration-ms="33307" started-at="2016-06-02T23:32:20Z" description="Testing updated order quantity persistence after logout and login back" depends-on-methods="qademo.testng.HomeAwayInterviewTest.testOrderSubmit" finished-at="2016-06-02T23:32:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testuser22c]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[passw0rd1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateOrderQuantity -->
+        <test-method status="PASS" signature="testRemoveAllItemsFromCart(java.lang.String, java.lang.String)[pri:0, instance:qademo.testng.HomeAwayInterviewTest@69997e9d]" name="testRemoveAllItemsFromCart" duration-ms="10151" started-at="2016-06-02T23:32:54Z" description="Testing remove items from cart" depends-on-methods="qademo.testng.HomeAwayInterviewTest.testUpdateOrderQuantity" finished-at="2016-06-02T23:33:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testuser22c]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[passw0rd1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRemoveAllItemsFromCart -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:qademo.testng.HomeAwayInterviewTest@69997e9d]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-06-02T23:33:04Z" finished-at="2016-06-02T23:33:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="testAfterSuite()[pri:0, instance:qademo.testng.HomeAwayInterviewTest@69997e9d]" name="testAfterSuite" is-config="true" duration-ms="144" started-at="2016-06-02T23:33:05Z" finished-at="2016-06-02T23:33:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAfterSuite -->
+      </class> <!-- qademo.testng.HomeAwayInterviewTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

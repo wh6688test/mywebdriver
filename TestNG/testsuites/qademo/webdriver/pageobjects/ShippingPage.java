@@ -3,6 +3,7 @@ package qademo.webdriver.pageobjects;
 import java.util.logging.Logger;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -32,6 +33,7 @@ public class ShippingPage extends CommonSectionPage {
        private By billingAddressBy=By.cssSelector(".wpsc_checkout_table textarea[title=billingaddress]");
        private By billingCityBy=By.cssSelector(".wpsc_checkout_table input[title=billingcity]");
        private By billingStateBy=By.cssSelector(".wpsc_checkout_table input[title=billingstate]");
+      
        private By billingCountryBy=By.cssSelector(".wpsc_checkout_table select[title=billingcountry]");
        private By billingPhoneBy=By.cssSelector(".wpsc_checkout_table input[title=billingphone]");
        
@@ -97,8 +99,7 @@ public class ShippingPage extends CommonSectionPage {
                    System.out.println("5");
 		   myutil.webdriver.WebDriverUtil.myWaitForVisible(driver, billingPhoneBy, myutil.webdriver.WebElementWait.DEFAULT_SLEEP_TIMEOUT);
                    System.out.println("6");
-		   myutil.webdriver.WebDriverUtil.myWaitForVisible(driver, billingCountryBy, myutil.webdriver.WebElementWait.DEFAULT_SLEEP_TIMEOUT);
-                   System.out.println("7");
+		
 
 		   billingEmailElement.clear();
 		   billingEmailElement.sendKeys(email);
@@ -141,9 +142,14 @@ public class ShippingPage extends CommonSectionPage {
 		   phoneElement.clear();
 		   phoneElement.sendKeys(city);
 		   
-
+		   WebElement selectBoxElement=driver.findElement(billingCountryBy);
+		   CommonControlUtil.moveToElement(driver, selectBoxElement);
+		   //myutil.webdriver.WebDriverUtil.myWaitForVisible(driver, billingCountryBy, myutil.webdriver.WebElementWait.DEFAULT_SLEEP_TIMEOUT);
+	          
+		   
+           System.out.println("7");
+		   //CommonControlUtil.selectBoxByValue(country);
 		   CommonControlUtil.selectBoxByValue(driver.findElement(billingCountryBy), country);
-		   //CommonControlUtil.selectBoxByValue(driver.findElement(billingStateBy), state);
 		   
 		   //getTotalSum();
 		   //System.out.println("TotalOrderPrice : "+totalOrderPrice);

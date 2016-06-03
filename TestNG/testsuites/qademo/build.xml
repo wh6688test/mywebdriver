@@ -49,7 +49,7 @@
 
                    <target name="compileutil" depends="clean">
  	            <javac  srcdir="${rootdir}/helpers" classpathref="classpath" includeAntRuntime="No" destdir="${class-dir}" verbose="${verbose}" >
-                                 <include name="**/util/**"/> 
+                                 <include name="**/myutil/**"/> 
                     </javac>
                   </target>
 

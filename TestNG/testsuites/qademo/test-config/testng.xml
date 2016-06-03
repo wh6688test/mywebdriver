@@ -3,8 +3,8 @@
 
 <suite name="HomeAwayInterviewSuite">
    <listeners>
-     <listener class-name="util.testng.CustomerLog"/>
-     <listener class-name="util.testng.CustomerReport"/>
+     <listener class-name="myutil.testng.CustomerLog"/>
+     <listener class-name="myutil.testng.CustomerReport"/>
    </listeners>
    
     <parameter name="username" value="testuser22c" />
