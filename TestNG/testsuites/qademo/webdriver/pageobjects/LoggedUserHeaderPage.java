@@ -6,8 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-import util.webdriver.WebDriverUtil;
-import util.webdriver.WebElementWait;
+import myutil.webdriver.WebDriverUtil;
+import myutil.webdriver.WebElementWait;
 
 
 public class LoggedUserHeaderPage extends CommonSectionPage{

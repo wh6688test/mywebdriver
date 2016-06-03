@@ -5,7 +5,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import util.webdriver.WebDriverUtil;
+//import util.webdriver.WebDriverUtil;
 
 
 public class TransactionResultPage extends CommonSectionPage {
@@ -22,7 +22,9 @@ public class TransactionResultPage extends CommonSectionPage {
 	    
 	    public double completeOrderTotalPrice() { 	
 		   //String finalTotalPriceString=driver.findElement(finalShippingBy).getText();
+                   System.out.println("finalShippingBy : " + finalShippingBy);
 		   List<WebElement >allTempElements=driver.findElements(finalShippingBy);
+                   System.out.println("allTempElements : " + allTempElements);
 		   String finalTotalPriceString=allTempElements.get(allTempElements.size()-1).getText();
 		   System.out.println("final new : " + finalTotalPriceString + "\n");
 		   String totalPriceString=finalTotalPriceString.split("\n")[1].trim().split(":")[1].trim().substring(1).replace(",","");

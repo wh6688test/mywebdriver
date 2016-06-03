@@ -14,9 +14,9 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import util.webdriver.WebDriverUtil;
-import util.webdriver.WebElementWait;
-import util.webdriver.CommonControlUtil;
+import myutil.webdriver.CommonControlUtil;
+import myutil.webdriver.WebDriverUtil;
+import myutil.webdriver.WebElementWait;
 
 import org.openqa.selenium.JavascriptExecutor;
 

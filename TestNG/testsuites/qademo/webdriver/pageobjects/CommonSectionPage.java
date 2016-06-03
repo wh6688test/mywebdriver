@@ -14,11 +14,11 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.LoadableComponent;
 
-import util.webdriver.CommonControlUtil;
-import util.webdriver.WebDriverUtil;
-import util.webdriver.WebElementWait;
-
 import com.google.common.base.Function;
+
+import myutil.webdriver.CommonControlUtil;
+import myutil.webdriver.WebDriverUtil;
+import myutil.webdriver.WebElementWait;
 
 public class CommonSectionPage  {
 	

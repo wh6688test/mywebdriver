@@ -16,9 +16,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.LoadableComponent;
 import org.testng.Assert;
 
-import util.common.CommonHelper;
-import util.webdriver.WebDriverUtil;
-import util.webdriver.WebElementWait;
+import myutil.common.CommonHelper;
+import myutil.webdriver.WebDriverUtil;
+import myutil.webdriver.WebElementWait;
 
 public class CheckoutPage extends CommonSectionPage{
 	
@@ -229,8 +229,11 @@ public class CheckoutPage extends CommonSectionPage{
 							 
 							 System.out.println("Price 1 : "+shippingPage.getTotalSum());
 							 
-							 
-							 TransactionResultPage transactionResultPage=shippingPage.completeOrder("testemail@email.com", "firstName", "lastName", "address", "Austin", "TX", "US", "1234566666", true);
+							 By usaBy=By.cssSelector("#region_country_form_7 span");
+                             String usaString=driver.findElement(usaBy).getText();
+							 //TransactionResultPage transactionResultPage=shippingPage.completeOrder("testemail@email.com", "firstName", "lastName", "address", "Austin", "TX", "US", "1234566666", true);
+                             System.out.println("usaString :" +usaString+"\n");
+							 TransactionResultPage transactionResultPage=shippingPage.completeOrder("testemail@email.com", "firstName", "lastName", "address", "Austin", "TX", usaString, "1234566666", true);
 							 //shippingPage.completeOrder("firstName", "lastName", "address", "Austin", "USA", "1234566666", true);
 
 							 System.out.println("Price 2 : " + transactionResultPage.completeOrderTotalPrice());

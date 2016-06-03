@@ -14,8 +14,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import util.common.CommonHelper;
-import util.webdriver.WebElementWait;
+import myutil.common.CommonHelper;
+import myutil.webdriver.WebElementWait;
 import qademo.webdriver.pageobjects.AccountPage;
 import qademo.webdriver.pageobjects.CheckoutPage;
 import qademo.webdriver.pageobjects.CommonSectionPage;

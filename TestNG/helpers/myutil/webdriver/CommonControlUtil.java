@@ -1,4 +1,4 @@
-package util.webdriver;
+package myutil.webdriver;
 
 import java.util.logging.Logger;
 
@@ -10,10 +10,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-import util.common.CommonHelper;
-
+import myutil.webdriver.WebDriverUtil;
 
 //http://www.guru99.com/accessing-forms-in-webdriver.html
+@SuppressWarnings("unused")
 public class CommonControlUtil {
 	static Logger log= Logger.getLogger(CommonControlUtil.class.getPackage().getName());
     /**
