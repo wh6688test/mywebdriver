@@ -10,9 +10,9 @@
     <parameter name="username" value="testuser22c" />
     <parameter name="password" value="passw0rd1"/>
     
-	<test name="HomeAwayInterViewTests">
+	<test name="DemoTest1">
 	  <classes>
-			<class name="qademo.testng.HomeAwayInterviewTest"/>
+			<class name="qademo.testng.DemoTest1.class"/>
 	  </classes>
 	</test>
 	

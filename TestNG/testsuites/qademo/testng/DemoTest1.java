@@ -26,7 +26,7 @@ import qademo.webdriver.pageobjects.TransactionResultPage;
 
 
 
-public class HomeAwayInterviewTest {
+public class DemoTest1 {
 	
 	 private final Logger logger= Logger.getLogger(this.getClass().getPackage().getName());
 	 WebDriver mydriver = new FirefoxDriver();

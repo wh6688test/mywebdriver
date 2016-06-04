@@ -8,4 +8,19 @@
       <class name="qademo.testng.HomeAwayInterviewTest"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="qademo.testng.HomeAwayInterviewTest">
+        <methods>
+          <include name="testBeforeSuite"/>
+          <include name="testUpdateOrderQuantity" invocation-numbers="0"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="testOrderSubmit" invocation-numbers="0"/>
+          <include name="testAfterSuite"/>
+          <include name="testRemoveAllItemsFromCart" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- qademo.testng.HomeAwayInterviewTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
